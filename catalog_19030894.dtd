@@ -1,0 +1,35 @@
+<!ELEMENT SoundSoul (StoreInfo,Inventory,Copyright)>
+<!ELEMENT StoreInfo (Name,Address,Contact,URL,Logo)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Contact ANY>
+<!ELEMENT Telephone (#PCDATA | Work)*>
+<!ELEMENT Work EMPTY>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Fax (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ELEMENT Logo (#PCDATA)>
+<!ELEMENT Inventory (Song+,Stocks)>
+<!ELEMENT Song (Title, Artist+, Duration, Producer*, Writer+, Director*, ReleaseYear, Album, Rating, Language+, Price, TrackNumber?)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Artist (#PCDATA)>
+<!ELEMENT Duration (#PCDATA)>
+<!ELEMENT Producer (#PCDATA)>
+<!ELEMENT Writer (#PCDATA)>
+<!ELEMENT Director (#PCDATA)>
+<!ELEMENT ReleaseYear (#PCDATA)>
+<!ELEMENT Album (#PCDATA)>
+<!ELEMENT Rating (#PCDATA)>
+<!ELEMENT Language (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT TrackNumber (#PCDATA)>
+<!ELEMENT Stocks (StockInfo*)>
+<!ELEMENT StockInfo EMPTY>
+<!ELEMENT Copyright (#PCDATA)>
+<!ATTLIST Telephone usage (Primary | Secondary) #IMPLIED>
+<!ATTLIST Work purpose CDATA #REQUIRED>
+<!ATTLIST URL access CDATA #FIXED "Public">
+<!ATTLIST Song genre (Jazz | Rock | Country | Classical | Opera | Blues | Rap | Pop | Dubstep | Disco | Reggaeton ) #REQUIRED 
+			   songID ID #REQUIRED>
+<!ATTLIST Rating source CDATA "unknown">
+<!ATTLIST StockInfo sID IDREF #REQUIRED available (true | false) #REQUIRED>			   

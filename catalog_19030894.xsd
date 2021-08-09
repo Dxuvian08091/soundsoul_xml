@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Root Element SoundSoul-->
+<xs:element name="SoundSoul">
+	<!--complexType element as it has child elements-->
+	<xs:complexType>
+		<!-- sequence compositor restricts elemets to be declared in following order in XML document-->
+		<xs:sequence>
+			<!--Declaring Elements inside element SoundSoul-->
+			<xs:element ref="StoreInfo"/>
+			<xs:element ref="Inventory"/>
+			<xs:element name="Copyright" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!--Element StoreInfo has details about The Store-->
+<xs:element name="StoreInfo">
+	<xs:complexType>
+		<!-- all compositor allows elemets to be declared without restriction in XML document-->
+		<xs:all>
+			<!--Declaring Elements inside element StoreInfo-->
+			<xs:element ref="Name"/>
+			<xs:element ref="Address"/>
+			<xs:element ref="Contact"/>
+			<xs:element ref="URL"/>
+			<xs:element ref="Logo"/>
+		</xs:all>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Name" type="xs:string"/>
+<xs:element name="Address" type="xs:string"/>
+
+<!--Element Contact has contact details like Telephone number,Email and Fax-->
+<xs:element name="Contact">
+	<xs:complexType mixed="true">
+		<xs:sequence>
+		<!--Declaring Elements inside element Contact-->
+		<!--Element Telephone can occur zero times or multiple times-->
+		<xs:element ref="Telephone" minOccurs="0" maxOccurs="unbounded"/>
+		<xs:element name="Email" type="xs:anyURI"/>
+		<xs:element name="Fax" type="xs:positiveInteger"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!--Element Telephone has telephone number details-->
+<xs:element name="Telephone">
+	<!--complexType mixed element as it has simple text, element and attributes-->
+	<xs:complexType mixed="true">
+		<xs:sequence>
+			<!--Declaring Elements inside element Telephone-->
+			<xs:element ref="Work"/>
+		</xs:sequence>
+		<!--Declaring attributes of element Telephone-->
+		<xs:attribute ref="usage"/>
+	</xs:complexType>
+</xs:element>
+
+<!--Defining attribute usage of the element Telephone-->
+<xs:attribute name="usage">
+	<!--simpleType with which only allows listed values-->
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Primary"/>
+			<xs:enumeration value="Secondary"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:attribute>
+
+<!--Defining element Work under the element Telephone-->
+<xs:element name="Work">
+	<!--complexType as it is an empty element with attribute-->
+	<xs:complexType>
+		<!--Declaring attributes of element Work-->
+		<xs:attribute name="purpose" type="xs:string"/>
+	</xs:complexType>
+</xs:element>
+
+<!--Element URL has The Stores Public URL-->
+<xs:element name="URL">
+	<!--complexType as it is an simple text content with attribute-->
+	<xs:complexType>
+		<!--using simpleContent inside complexType-->
+		<xs:simpleContent>
+			<xs:extension base="xs:anyURI">
+				<!--declaring attribute for element URL with fixed value-->
+				<xs:attribute name="access" fixed="Public"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Logo" type="xs:string"/>
+
+<!--Element Inventory has details about the songs The Store sells and their stocks-->
+<xs:element name="Inventory">
+	<xs:complexType>
+		<xs:sequence>
+			<!--Element Song can occur zero times or multiple times-->
+			<xs:element ref="Song" minOccurs="0" maxOccurs="unbounded"/>
+			<!--Element Stocks has to occurs only once-->
+			<xs:element ref="Stocks"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!--Element Song has song details-->
+<xs:element name="Song">
+	<!--complexType as it has child element and attributes-->
+	<xs:complexType>
+		<xs:sequence>
+			<!--Declaring and defining child elements inside element Song-->
+			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Artist" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element ref="Duration"/>
+			<xs:element name="Producer" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Writer" type ="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="Director" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ReleaseYear"/>
+			<xs:element name="Album" type="xs:string"/>
+			<xs:element ref="Rating"/>
+			<xs:element name="Language" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="Price" type="xs:string"/>
+			<xs:element name="TrackNumber" minOccurs="0" type="xs:positiveInteger"/>
+		</xs:sequence>
+			<!--Declaring attributes of element Song-->
+			<xs:attribute ref="genre" use="required"/>
+			<xs:attribute ref="songID" use="required"/> 
+	</xs:complexType>
+</xs:element>
+
+<!--Duration has song duration-->
+<xs:element name="Duration">
+	<!--simpleType with Pattern restriction-->
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9][0-9]:[0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+
+<!--ReleaseYear has information of when song was released-->
+<xs:element name="ReleaseYear">
+	<!--simpleType with Pattern restriction-->
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+
+<!--Rating has information of song rated in streaming media and from unknown sources-->
+<xs:element name="Rating" type="Rate"/>
+	<!--Referencing element Rating with its type as complexType name-->
+	<xs:complexType name="Rate" mixed="true">
+		<xs:simpleContent>
+			<xs:extension base="xs:double">
+				<xs:attribute name="source" default="unknown"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+<!--Stocks has stock information on all the songs The Store sells-->
+<xs:element name="Stocks">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="StockInfo" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!--StockInfo references songs has their stock availability information-->
+<xs:element name="StockInfo">
+	<xs:complexType>
+		<xs:attribute ref="sID"/>
+		<xs:attribute ref="available"/>
+	</xs:complexType>
+</xs:element>
+
+<!--Defining attribute genre of element Song-->
+<xs:attribute name="genre">
+	<!--simpleType with which only allows listed values-->
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Jazz"/>
+			<xs:enumeration value="Rock"/>
+			<xs:enumeration value="Country"/>
+			<xs:enumeration value="Classical"/>
+			<xs:enumeration value="Opera"/>
+			<xs:enumeration value="Blues"/>
+			<xs:enumeration value="Rap"/>
+			<xs:enumeration value="Pop"/>
+			<xs:enumeration value="Dubstep"/>
+			<xs:enumeration value="Disco"/>
+			<xs:enumeration value="Reggaeton"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:attribute>
+
+<!--attribute songID only accepts unique values-->
+<xs:attribute name="songID" type="xs:ID"/>
+<!--attribute sID references ID values-->
+<xs:attribute name="sID" type="xs:IDREF"/>
+
+<!--Defining attribute available of the element StockInfo-->
+<xs:attribute name="available">
+	<!--simpleType with which only allows listed values-->
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:attribute>
+</xs:schema>

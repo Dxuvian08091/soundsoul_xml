@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Links CSS-->
+<?xml-stylesheet type="text/css" href="catalog_19030894.css"?>
+
+<!--Links DTD 
+<!DOCTYPE SoundSoul SYSTEM "catalog_19030894.dtd">
+<SoundSoul>
+-->
+
+<!--Links Schema-->
+<SoundSoul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema">
+	<!--Details of The Store-->
+	<StoreInfo>
+		<Name>Sound Soul</Name>
+		<Address>Kumaripati, Lalitpur</Address>
+		<Contact>Contact Us
+						<!--Primary Telephone number are for official use only-->
+			<Telephone usage="Primary">015548197<Work purpose="Official"/>
+			</Telephone>
+			<!--Secondary Telephone number are for Customer Service only-->
+			<Telephone usage="Secondary">015448197<Work purpose="CustomerCare"/>
+			</Telephone>
+			<Email>soundsoul@kmp.com</Email>
+			<Fax>015449197</Fax>
+		</Contact>
+		<!--Only Customer Designated URL are provided to the Public-->
+		<URL access="Public">http://www.soundsoul.com.np</URL>
+		<Logo>Sound Soul</Logo>
+	</StoreInfo>
+
+	<!--Inventory has information about the Songs that the Store sells and the stock details-->
+	<Inventory>
+		<!--Each song has a genre and a unique song ID-->
+		<Song genre="Rap" songID="S01">
+			<Title>Remember This</Title>
+			<Artist>NF</Artist>
+			<Duration>04:00</Duration>
+			<Writer>Nathan Feuerstein</Writer>
+			<ReleaseYear>2017</ReleaseYear>
+			<Album>Perception</Album>
+			<!--Song Ratings are based on known and unknown sources-->
+			<Rating source="Tidal">4.8</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Reggaeton" songID="S02">
+			<Title>Mi Gente</Title>
+			<!--A song can have one or more Artists-->
+			<Artist>J Balvin</Artist>
+			<Artist>Willy William</Artist>
+			<Duration>03:09</Duration>
+			<Producer>Willy William</Producer>
+			<!--A song can have one or more Producers-->
+			<Writer>Willy William</Writer>
+			<Writer>Andrés David Restrepo</Writer>
+			<Writer>Mohombi Nzasi Moupondo</Writer>
+			<!--A song can have zero or more Directors-->
+			<Director>36 Grados</Director>
+			<ReleaseYear>2017</ReleaseYear>
+			<Album>Vibras</Album>
+			<Rating>4.8</Rating>
+			<!--A song have lyrics with one or multiple languages-->
+			<Language>Spanish</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Country" songID="S03">
+			<Title>Take Me Home, Country Roads</Title>
+			<Artist>John Denver</Artist>
+			<Duration>03:17</Duration>
+			<Producer>Milton Okun</Producer>
+			<Producer>Susan Ruskin</Producer>
+			<Writer>John Denver</Writer>
+			<Writer>Taffy Nivert Danoff</Writer>
+			<Writer>Mary Danoff</Writer>
+			<ReleaseYear>1971</ReleaseYear>
+			<Album>Poems, Prayers &amp; Promises</Album>
+			<Rating>4.8</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+			<!--A song may have only one a TrackNumber-->
+			<TrackNumber>14</TrackNumber>
+		</Song>
+		<Song genre="Blues" songID="S04">
+			<Title>It's a Man's Man's Man's World</Title>
+			<Artist>James Brown</Artist>
+			<Duration>02:52</Duration>
+			<Producer>James Brown</Producer>
+			<Writer>James Brown</Writer>
+			<Writer>Betty Jean Newsome</Writer>
+			<ReleaseYear>1966</ReleaseYear>
+			<Album>It's a Man's Man's Man's World</Album>
+			<Rating source="Amazon Music">3.37</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Rock" songID="S05">
+			<Title>Bohemian Rhapsody</Title>
+			<Artist>Queen</Artist>
+			<Duration>05:55</Duration>
+			<Producer>Roy Thomas Baker</Producer>
+			<Producer>Queen</Producer>
+			<Writer>Freddie Mercury</Writer>
+			<Director>Bruce Gowers</Director>
+			<ReleaseYear>1975</ReleaseYear>
+			<Album>A Night at the Opera</Album>
+			<Rating>3.37</Rating>
+			<Language>English</Language>
+			<Price>$10.98</Price>
+		</Song>
+		<Song genre="Pop" songID="S06">
+			<Title>Peaches</Title>
+			<Artist>Justin Bieber</Artist>
+			<Artist>Daniel Caesar</Artist>
+			<Artist>Giveon</Artist>
+			<Duration>03:18</Duration>
+			<Producer>Harv</Producer>
+			<Producer>Shndo</Producer>
+			<Writer>Justin Bieber</Writer>
+			<Writer>Giveon Evans</Writer>
+			<Writer>Luis Martinez Jr.</Writer>
+			<Director>Colin Tilley</Director>
+			<ReleaseYear>2021</ReleaseYear>
+			<Album>Justice</Album>
+			<Rating source="Deezer">4.8</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Classical" songID="S07">
+			<Title>The Four Seasons</Title>
+			<Artist>Antonio Vivaldi</Artist>
+			<Duration>42:00</Duration>
+			<Producer>Unknown</Producer>
+			<Writer>Antonio Vivaldi</Writer>
+			<ReleaseYear>1723</ReleaseYear>
+			<Album>Unknown</Album>
+			<Rating source="Spotify">4.8</Rating>
+			<Language>French</Language>
+			<Price>$39.26</Price>
+		</Song>
+		<Song genre="Opera" songID="S08">
+			<Title>The Phantom of the Opera</Title>
+			<Artist>Sarah Brightman</Artist>
+			<Artist>Steve Harley</Artist>
+			<Duration>04:38</Duration>
+			<Producer>Mike Batt</Producer>
+			<Producer>Andrew Lloyd Webber</Producer>
+			<Writer>Andrew Lloyd Webber</Writer>
+			<Writer>Richard Stilgoe</Writer>
+			<Writer>Mike Batt</Writer>
+			<ReleaseYear>1986</ReleaseYear>
+			<Album>The Phantom of the Opera</Album>
+			<Rating source="Qobuz">3.8</Rating>
+			<Language>English</Language>
+			<Price>$1.99</Price>
+		</Song>
+		<Song genre="Jazz" songID="S09">
+			<Title>In Other Words</Title>
+			<Artist>Kaye Ballard</Artist>
+			<Duration>02:14</Duration>
+			<Producer>unknown</Producer>
+			<Writer>Bart Howard</Writer>
+			<ReleaseYear>1954</ReleaseYear>
+			<Album>In Other Words</Album>
+			<Rating>4.2</Rating>
+			<Language>English</Language>
+			<Price>$0.99</Price>
+		</Song>
+		<Song genre="Dubstep" songID="S10">
+			<Title>Bangarang</Title>
+			<Artist>Skrillex</Artist>
+			<Artist>Sirah</Artist>
+			<Duration>03:35</Duration>
+			<Producer>Skrillex</Producer>
+			<Writer>Sonny Moore</Writer>
+			<Director>Tony T.Datis</Director>
+			<ReleaseYear>2011</ReleaseYear>
+			<Album>Bangarang</Album>
+			<Rating>4.5</Rating>
+			<Language>English</Language>
+			<Price>$9.49</Price>
+		</Song>
+		<Song genre="Disco" songID="S11">
+			<Title>Thriller</Title>
+			<Artist>Michael Jackson</Artist>
+			<Duration>05:57</Duration>
+			<Producer>Quincy Jones</Producer>
+			<Writer>Rod Temperton</Writer>
+			<Director>John Landis</Director>
+			<ReleaseYear>1983</ReleaseYear>
+			<Album>Thriller</Album>
+			<Rating>4.8</Rating>
+			<Language>English</Language>
+			<Price>$15.00</Price>
+		</Song>
+		<Song genre="Dubstep" songID="S12">
+			<Title>Dangerous</Title>
+			<Artist>David Guetta</Artist>
+			<Artist>Sam Martin</Artist>
+			<Duration>03:23</Duration>
+			<Producer>David Guetta</Producer>
+			<Producer>Giorgio Tuinfort</Producer>
+			<Producer>Sam Martin</Producer>
+			<Writer>David Guetta</Writer>
+			<Writer>Giorgio Tuinfort</Writer>
+			<Writer>Sam Martin</Writer>
+			<Director>Jonas Akerlund</Director>
+			<ReleaseYear>2014</ReleaseYear>
+			<Album>Listen</Album>
+			<Rating source="Apple Music">4.8</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Rock" songID="S13">
+			<Title>House of the Rising Sun</Title>
+			<Artist>The Animals</Artist>
+			<Duration>04:29</Duration>
+			<Producer>Mickie Most</Producer>
+			<Writer>Alan Price</Writer>
+			<ReleaseYear>1964</ReleaseYear>
+			<Album>The Animals</Album>
+			<Rating>4.8</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Dubstep" songID="S14">
+			<Title>Animals</Title>
+			<Artist>Martin Garrix</Artist>
+			<Duration>05:04</Duration>
+			<Producer>Martin Garrix</Producer>
+			<Writer>Martin Garritsen</Writer>
+			<ReleaseYear>2013</ReleaseYear>
+			<Album>Gold Skies</Album>
+			<Rating>4</Rating>
+			<Language>English</Language>
+			<Price>$2.99</Price>
+		</Song>
+		<Song genre="Pop" songID="S15">
+			<Title>Alors on danse</Title>
+			<Artist>Stromae</Artist>
+			<Duration>03:29</Duration>
+			<Producer>Stromae</Producer>
+			<Producer>Dimitri Borrey</Producer>
+			<Writer>Paul Van Haver</Writer>
+			<Director>Jerome Guiot</Director>
+			<Director>Paul van Haver</Director>
+			<ReleaseYear>2009</ReleaseYear>
+			<Album>Cheese</Album>
+			<Rating>4.7</Rating>
+			<Language>French</Language>
+			<Price>$1.99</Price>
+		</Song>
+		<Song genre="Reggaeton" songID="S16">
+			<Title>Mysterious Girl</Title>
+			<Artist>Peter Andre</Artist>
+			<Artist>Bubbler Ranx</Artist>
+			<Duration>03:39</Duration>
+			<Producer>Ollie Jacobs</Producer>
+			<Writer>Peter Andre</Writer>
+			<Writer>Bubbler Ranx</Writer>
+			<Writer>Ollie Jacobs</Writer>
+			<ReleaseYear>1995</ReleaseYear>
+			<Album>Natural and The Long Road Back</Album>
+			<Rating>4.9</Rating>
+			<Language>English</Language>
+			<Price>$5.76</Price>
+		</Song>
+		<Song genre="Rock" songID="S17">
+			<Title>Sacrifice</Title>
+			<Artist>Elton John</Artist>
+			<Duration>05:07</Duration>
+			<Producer>Chris Thomas</Producer>
+			<Writer>Elton John</Writer>
+			<Writer>Bernie Taupin</Writer>
+			<ReleaseYear>1989</ReleaseYear>
+			<Album>Sleeping with the Past</Album>
+			<Rating>4.8</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Pop" songID="S18">
+			<Title>Loca</Title>
+			<Artist>Shakira</Artist>
+			<Artist>El Cata</Artist>
+			<Duration>03:05</Duration>
+			<Producer>Shakira</Producer>
+			<Writer>Shakira</Writer>
+			<Writer>Edward Bello</Writer>
+			<Writer>Armando Pérez</Writer>
+			<Director>Jaume de Laiguana</Director>
+			<ReleaseYear>2010</ReleaseYear>
+			<Album>Sale el Sol</Album>
+			<Rating>4.8</Rating>
+			<Language>Spanish</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Pop" songID="S19">
+			<Title>One Dance</Title>
+			<Artist>Drake</Artist>
+			<Artist>Wizkid</Artist>
+			<Artist>Kyla</Artist>
+			<Duration>02:54</Duration>
+			<Producer>Nineteen85</Producer>
+			<Producer>40</Producer>
+			<Producer>WizKid</Producer>
+			<Writer>Aubrey Graham</Writer>
+			<Writer>Ayodeji Balogun</Writer>
+			<Writer>Noah Shebib</Writer>
+			<Director>Don Roy King</Director>
+			<ReleaseYear>2016</ReleaseYear>
+			<Album>Views</Album>
+			<Rating>4.7</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<Song genre="Rap" songID="S20">
+			<Title>Lucid Dreams</Title>
+			<Artist>Juice Wrld</Artist>
+			<Duration>03:59</Duration>
+			<Producer>Nick Mira</Producer>
+			<Writer>Jarad Higgins</Writer>
+			<Writer>Danny Snodgrass, Jr.</Writer>
+			<Writer>Dominic Miller</Writer>
+			<Director>Cole Bennett</Director>
+			<ReleaseYear>2018</ReleaseYear>
+			<Album>Goodbye &amp; Good Riddance</Album>
+			<Rating>4.7</Rating>
+			<Language>English</Language>
+			<Price>$1.29</Price>
+		</Song>
+		<!--Stocks has stock details of all the song the store sells-->
+		<Stocks>
+			<!--StockInfo references to each unique song ID and has stock availability information-->
+			<StockInfo sID="S01" available="true"/>
+			<StockInfo sID="S02" available="true"/>
+			<StockInfo sID="S03" available="false"/>
+			<StockInfo sID="S04" available="true"/>
+			<StockInfo sID="S05" available="true"/>
+			<StockInfo sID="S06" available="false"/>
+			<StockInfo sID="S07" available="true"/>
+			<StockInfo sID="S08" available="true"/>
+			<StockInfo sID="S09" available="false"/>
+			<StockInfo sID="S10" available="true"/>
+			<StockInfo sID="S11" available="true"/>
+			<StockInfo sID="S12" available="false"/>
+			<StockInfo sID="S13" available="true"/>
+			<StockInfo sID="S14" available="true"/>
+			<StockInfo sID="S15" available="true"/>
+			<StockInfo sID="S16" available="false"/>
+			<StockInfo sID="S17" available="true"/>
+			<StockInfo sID="S18" available="true"/>
+			<StockInfo sID="S19" available="false"/>
+			<StockInfo sID="S20" available="true"/>
+		</Stocks>
+	</Inventory>
+	<!--Copyrighted Content Information-->
+	<Copyright>Copyright&#169; 1999-2021. All Rights Reserved.</Copyright>
+</SoundSoul>
